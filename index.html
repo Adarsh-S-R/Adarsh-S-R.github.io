@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Adarsh SR's portfolio and blog showcasing his work in cybersecurity, reverse engineering, and digital design.">
+    <title>Adarsh SR | Portfolio & Blog</title>
+    <link href="https://fonts.cdnfonts.com/css/technos" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Product+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="photos/favicon.png" type="photos/favicon.png">
+    <link href="styles.css" rel="stylesheet"/> <!-- Linking external CSS file -->
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Adarsh</div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#resume">Contact</a>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Bio Section -->
+        <div class="content">
+            <img src="photos/shadowboard.jpg" alt="Adarsh SR, a BCA student and cybersecurity enthusiast" class="profile-image">
+            <div class="bio">
+                <h1>Adarsh SR</h1>
+                <p>
+                    I'm a BCA student passionate about cybersecurity, reverse engineering, and digital design. Founder of the TRIADA CTF team, I participate in CTFs and hackathons. Currently, I work as a designer at VULNCON, always exploring new tech solutions and pushing my skills further.
+                </p>
+                <img src="https://tryhackme-badges.s3.amazonaws.com/AdarshSR.png" alt="Adarsh SR's TryHackMe badge showcasing cybersecurity skills" style="width: 250px; height: auto;" />
+                <div class="social-icons">
+                    <a href="mailto:adarshtriada@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://x.com/adarsh_sr_" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/Adarsh-S-R" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adarsh-sr" target="_blank"><i class="fab fa-linkedin"></i></a>
+                     <a href="https://ctftime.org/team/303057" target="_blank" class="social-link">
+        <img src="photos/ctftimelogo.svg" alt="CTFtime Logo" class="social-logo">
+    </a>
+                </div>
+            </div>
+        </div>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <h1>PROJECTS</h1>
+    <div class="project-list">
+        <h2>• Subseek</h2>
+        <p>A simple path fuzzing tool that discovers valid paths on a target website using a customizable wordlist.</p>
+        <a href="https://github.com/Adarsh-S-R/subseek/" class="project-github">GitHub Repo</a>
+        <!-- Add more project descriptions here -->
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="section">
+    <h1>Latest Blogs</h1>
+    <div class="blog-list">
+        <p>Coming soon...</p>
+        <!-- Add more blog items here -->
+    </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="section resume-section">
+    <h1>Download My Resume</h1>
+    <p>Want to learn more about my work and experience? Download my resume below:</p>
+    <a href="https://drive.google.com/file/d/1GC0yRu3cZmOhK57dk6T3J-zdOPzYIczp/view?usp=sharing" download class="btn">Download Resume</a>
+</section>
+<!-- Image Showcase Section -->
+<section id="image-showcase" class="section">
+    <h1></h1>
+    <div class="image-item">
+        <img src="photos/nwrk_pty01.jpg" alt="Image 1">
+        <p class="image-caption"></p>
+    </div>
+    <div class="image-item">
+        <img src="photos/Adarsh_triada.jpg" alt="Image 3">
+        <p class="image-caption">With Rahul Sasi, Founder - CloudSEK</p>
+    </div>
+    <div class="image-item">
+        <img src="photos/team.jpg" alt="Image 2">
+        <p class="image-caption">Team VULNCON</p>
+    </div>
+    <div class="image-item">
+        <img src="photos/photo_2024-04-27_18-50-06.jpg" alt="Image 3">
+        <p class="image-caption">With Rushabh Pinesh Mehta at BSides Bangalore</p>
+    </div>
+    
+    
+    <!-- Add more images here as needed -->
+</section>
+    </div>
+
+    <div class="footer">
+        <div class="rights">© 2024 Adarsh SR. All rights reserved.</div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            if (nav.style.maxHeight) {
+                nav.style.maxHeight = null;
+            } else {
+                nav.style.maxHeight = nav.scrollHeight + "px";
+            }
+        }
+    </script>
+</body>
+</html>

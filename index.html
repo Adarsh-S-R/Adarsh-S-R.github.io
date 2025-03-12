@@ -1,122 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Adarsh SR's portfolio and blog showcasing his work in cybersecurity, reverse engineering, and digital design.">
-    <title>Adarsh SR | Portfolio & Blog</title>
+    <meta name="description" content="Adarsh SR's portfolio - Cybersecurity | Reverse Engineering | Digital Design">
+    <title>Adarsh SR | Cybersecurity Enthusiast</title>
     <link href="https://fonts.cdnfonts.com/css/technos" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="icon" href="photos/favicon.png" type="photos/favicon.png">
-    <link href="styles.css" rel="stylesheet"/> <!-- Linking external CSS file -->
+    <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
-    <header class="header">
-        <div class="logo">Adarsh</div>
-        <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Blog</a>
-            <a href="#resume">Contact</a>
+    <header>
+        <div class="logo" onclick="scrollToTop()">Adarsh<span class="logo-accent">.</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
-        <div class="burger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
     </header>
 
-    <div class="container">
-        <!-- Bio Section -->
-        <div class="content">
-            <img src="photos/A_sq.png" alt="Adarsh SR, a BCA student and cybersecurity enthusiast" class="profile-image">
-            <div class="bio">
-                <h1>Adarsh SR</h1>
-                <p>
-                    I'm a BCA student passionate about cybersecurity, reverse engineering, and digital design. Founder of the TRIADA CTF team, I participate in CTFs and hackathons. Currently, I work as a designer at VULNCON, always exploring new tech solutions and pushing my skills further.
-                </p>
-
-                <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2231480" 
-        style="border:none; width:100%; height:150px; overflow:hidden;" 
-        scrolling="no">
-</iframe>
-                <div class="social-icons">
-                    <a href="mailto:adarshtriada@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                    <a href="https://x.com/adarsh_sr_" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://github.com/Adarsh-S-R" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/adarsh-sr" target="_blank"><i class="fab fa-linkedin"></i></a>
-                     <a href="https://ctftime.org/team/303057" target="_blank" class="social-link">
-        <img src="photos/ctftimelogo.svg" alt="CTFtime Logo" class="social-logo">
-    </a>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1 class="glitch" data-text="Adarsh SR">Adarsh SR</h1>
+                <div class="typewriter">
+                    <span id="typewriter-text"></span><span class="cursor">|</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
                 </div>
             </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="photos/A_sq.png" alt="Adarsh SR, Cybersecurity Enthusiast" width="300" height="300">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-header">
+                <h2>About<span class="accent">.</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a BCA student passionate about cybersecurity, reverse engineering, and digital design. As the
+                        founder of the TRIADA CTF team, I actively participate in CTFs and hackathons to sharpen my
+                        technical skills and stay updated with the latest security trends.</p>
+                    <p>Currently working as a designer at VULNCON, I combine my technical knowledge with creative
+                        abilities to develop effective solutions. I'm constantly exploring new technologies and pushing
+                        the boundaries of my capabilities.</p>
+
+                    <div class="skills">
+                        <div class="skill-category">
+                            <h3>Technical Skills</h3>
+                            <div class="skill-tags">
+                                <span class="tag">Penetration Testing</span>
+                                <span class="tag">Reverse Engineering</span>
+                                <span class="tag">Binary Exploitation</span>
+                                <span class="tag">Web Security</span>
+                                <span class="tag">Linux</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Tools & Technologies</h3>
+                            <div class="skill-tags">
+                                <span class="tag">Burp Suite</span>
+                                <span class="tag">Ghidra</span>
+                                <span class="tag">Wireshark</span>
+                                <span class="tag">Metasploit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="section-header">
+                <h2>Projects<span class="accent">.</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Subseek</h3>
+                        <p>A path fuzzing tool that discovers valid paths on target websites using customizable
+                            wordlists. Built for security professionals and penetration testers.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Web Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Adarsh-S-R/subseek/" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                            <span class="project-status">In Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Web Pentesting Platform</h3>
+                        <p>A vulnerable web application built for learning and practicing web vulnerabilities like SQLi,
+                            XSS, IDOR, SSRF, and File Upload Exploits. </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Web Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://web-pentest-playground.onrender.com" class="project-link" target="_blank">
+                                Live
+                            </a>
+                            <a href="https://github.com/Adarsh-S-R/web-pentest-playground" class="project-link"
+                                target="_blank">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                            <span class="project-status">In Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card empty">
+                    <div class="add-project">
+                        <i class="fas fa-plus-circle"></i>
+                        <p>More Projects Coming Soon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog">
+            <div class="section-header">
+                <h2>Blog & Writeups<span class="accent">.</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="blog-content">
+                <p>Explore my latest blogs and detailed writeups on cybersecurity challenges and CTF solutions. I
+                    document my learning journey and share insights into various security concepts.</p>
+                <a href="https://adarshsr.gitbook.io/writeups" class="btn primary-btn" target="_blank">
+                    <i class="fas fa-book"></i> Read My Writeups
+                </a>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="section-header">
+                <h2>Gallery<span class="accent">.</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="photos/nwrk_pty01.jpg" alt="Network Party" width="300" height="200" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p>VULNCON Networking Party</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/Adarsh_triada.jpg" alt="With Rahul Sasi" width="300" height="200"
+                        class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p>With Rahul Sasi, Founder - CloudSEK</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/team.jpg" alt="Team VULNCON" width="300" height="200" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p>Team VULNCON</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/img_null.jpg" alt="With Rahul Sasi" width="300" height="200" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p>With Monnappa KA </p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/photo_2024-04-27_18-50-06.jpg" alt="BSides Bangalore" width="300" height="200"
+                        class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p>With Rushabh Pinesh Mehta at BSides Bangalore</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-header">
+                <h2>Contact<span class="accent">.</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="connect-text">
+                        <h3>Let's Connect</h3>
+                        <p>Feel free to reach out for collaborations, CTF teams, or just to say hi!</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="mailto:adarshtriada@gmail.com" class="social-link" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                            <span>adarshtriada@gmail.com</span>
+                        </a>
+                        <a href="https://x.com/adarsh_sr_" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                            <span>@adarsh_sr_</span>
+                        </a>
+                        <a href="https://github.com/Adarsh-S-R" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Adarsh-S-R</span>
+                        </a>
+                        <a href="https://linkedin.com/in/adarsh-sr" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>adarsh-sr</span>
+                        </a>
+                        <a href="https://ctftime.org/team/303057" class="social-link" target="_blank">
+                            <img src="photos/ctftimelogo.svg" alt="CTFtime Logo" class="ctftime-icon" width="16"
+                                height="16">
+                            <span>CTFtime</span>
+                        </a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1GC0yRu3cZmOhK57dk6T3J-zdOPzYIczp/view?usp=sharing"
+                        class="btn primary-btn" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Adarsh<span class="logo-accent">.</span></div>
+            <div class="footer-text">
+                <p>&copy; 2024 Adarsh SR. All rights reserved.</p>
+                <p>Cybersecurity Enthusiast | CTF Player | Designer</p>
+            </div>
         </div>
+    </footer>
 
-<!-- Projects Section -->
-<section id="projects" class="section">
-    <h1>Projects</h1>
-    <div class="project-list">
-        <h2>• Subseek</h2>
-        <p>A simple path fuzzing tool that discovers valid paths on a target website using a customizable wordlist. - In development</p>
-        <a href="https://github.com/Adarsh-S-R/subseek/" class="project-github">GitHub Repo</a>
-        <!-- Add more project descriptions here -->
-    </div>
-</section>
-
-<!-- Blog Section -->
-<section id="blog" class="section resume-section">
-    <h1>Latest Blogs and Writeups</h1>
-    <div class="blog-list">
-        <p>   Explore my latest blogs and detailed writeups on cybersecurity challenges and CTF solutions. </p>
-        <a href="https://adarshsr.gitbook.io/writeups" download class="btn">Blogs / Writeups</a>
-    </div>
-</section>
-
-<!-- Resume Section -->
-<section id="resume" class="section resume-section">
-    <h1>Download My Resume</h1>
-    <p>Want to learn more about my work and experience? Download my resume below:</p>
-    <a href="https://drive.google.com/file/d/1GC0yRu3cZmOhK57dk6T3J-zdOPzYIczp/view?usp=sharing" download class="btn">Download Resume</a>
-</section>
-<!-- Image Showcase Section -->
-<section id="image-showcase" class="section">
-    <h1></h1>
-    <div class="image-item">
-        <img src="photos/nwrk_pty01.jpg" alt="Image 1">
-        <p class="image-caption"></p>
-    </div>
-    <div class="image-item">
-        <img src="photos/Adarsh_triada.jpg" alt="Image 3">
-        <p class="image-caption">With Rahul Sasi, Founder - CloudSEK</p>
-    </div>
-    <div class="image-item">
-        <img src="photos/team.jpg" alt="Image 2">
-        <p class="image-caption">Team VULNCON</p>
-    </div>
-    <div class="image-item">
-        <img src="photos/photo_2024-04-27_18-50-06.jpg" alt="Image 3">
-        <p class="image-caption">With Rushabh Pinesh Mehta at BSides Bangalore</p>
-    </div>
-    
-    
-    <!-- Add more images here as needed -->
-</section>
-    </div>
-
-    <div class="footer">
-        <div class="rights">© 2024 Adarsh SR. All rights reserved.</div>
-    </div>
+    <div class="cursor-follow"></div>
+    <a href="#home" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
     <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.nav');
-            if (nav.style.maxHeight) {
-                nav.style.maxHeight = null;
+        // Typewriter effect
+        const typewriterText = document.getElementById('typewriter-text');
+        const phrases = ['Cybersecurity Enthusiast', 'CTF Player', 'Reverse Engineer', 'Digital Designer'];
+        let phraseIndex = 0;
+        let letterIndex = 0;
+        let isDeleting = false;
+        let typewriterDelay = 100;
+
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                typewriterText.textContent = currentPhrase.substring(0, letterIndex - 1);
+                letterIndex--;
+                typewriterDelay = 50;
             } else {
-                nav.style.maxHeight = nav.scrollHeight + "px";
+                typewriterText.textContent = currentPhrase.substring(0, letterIndex + 1);
+                letterIndex++;
+                typewriterDelay = 100;
+            }
+
+            if (!isDeleting && letterIndex === currentPhrase.length) {
+                isDeleting = true;
+                typewriterDelay = 1000; // Wait before deleting
+            } else if (isDeleting && letterIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typewriterDelay = 500; // Wait before typing next phrase
+            }
+
+            setTimeout(typeWriter, typewriterDelay);
+        }
+
+        // Navigation highlight & smooth scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function activeNavLink() {
+            let position = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (position >= sectionTop && position < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + sectionId) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+
+            // Show/hide back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (position > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
             }
         }
+
+        // Mobile navigation
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+
+        function toggleNav() {
+            nav.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        // Custom cursor
+        const cursor = document.querySelector('.cursor-follow');
+
+        function updateCursor(e) {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        }
+
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                counter.innerText = '0';
+                updateCount();
+            });
+        }
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            // Start typewriter
+            setTimeout(typeWriter, 1000);
+
+            // Set counter data attributes
+            document.querySelectorAll('.counter').forEach(counter => {
+                counter.setAttribute('data-target', counter.innerText);
+            });
+
+            // Event listeners
+            window.addEventListener('scroll', activeNavLink);
+            burger.addEventListener('click', toggleNav);
+            document.addEventListener('mousemove', updateCursor);
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    if (nav.classList.contains('nav-active')) {
+                        toggleNav();
+                    }
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+
+                        if (entry.target.classList.contains('about-stats')) {
+                            animateCounters();
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observe sections for animations
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Observe stats section specifically for counter animation
+            observer.observe(document.querySelector('.about-stats'));
+        });
     </script>
 </body>
+
 </html>

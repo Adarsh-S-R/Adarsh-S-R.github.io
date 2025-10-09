@@ -1,0 +1,19 @@
+{
+  "name": "Adarsh SR Cybersecurity Portfolio",
+  "short_name": "Adarsh SR Portfolio",
+  "description": "Portfolio of Adarsh SR – Cybersecurity Enthusiast, Founder of TRIADA CTF Team, Core Team at VULNCON",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0b0f",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "photos/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

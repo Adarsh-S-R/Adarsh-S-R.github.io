@@ -375,15 +375,14 @@ function initEasterEggs() {
     // Console easter egg
     console.log(`
     ╔═══════════════════════════════════════╗
-    ║        Welcome to Adarsh SR's         ║
-    ║      Cybersecurity Portfolio!         ║
+    ║        Welcome to my Portfolio!       ║
     ║                                       ║
-    ║   If you're reading this, you're      ║
-    ║   probably a fellow security          ║
-    ║   enthusiast. Feel free to reach      ║
-    ║   out for collaboration!              ║
+    ║    If you're reading this, you're     ║
+    ║      probably a fellow security       ║
+    ║    enthusiast. Feel free to reach     ║
+    ║       out for collaboration!          ║
     ║                                       ║
-    ║   Email: adarsh@cybersec.dev          ║
+    ║     Email: adarshtriada@gmail.com     ║
     ╚═══════════════════════════════════════╝
     `);
 }
@@ -442,52 +441,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     initEasterEggs(); // Ensure console easter egg is always visible
+    initHeroImageStroke(); // Initialize hero image stroke effect
+
+    // Scroll arrow click
+    const scrollArrow = document.querySelector('.scroll-arrow');
+    if (scrollArrow) {
+        scrollArrow.addEventListener('click', () => {
+            const nextSection = document.querySelector('#about');
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
 });
 
-// Matrix Rain Effect
-function createMatrixRain() {
-    const matrixContainer = document.querySelector('.matrix-rain');
-    if (!matrixContainer) return;
-
-    const characters = '01';
-    const fontSize = 14;
-    const columns = Math.floor(window.innerWidth / fontSize);
-    const drops = [];
-
-    // Initialize drops
-    for (let i = 0; i < columns; i++) {
-        drops[i] = 1;
-    }
-
-    function drawMatrix() {
-        // Clear previous drops
-        matrixContainer.innerHTML = '';
-
-        for (let i = 0; i < drops.length; i++) {
-            const drop = document.createElement('div');
-            drop.style.cssText = `
-                position: absolute;
-                left: ${i * fontSize}px;
-                top: ${drops[i] * fontSize}px;
-                color: rgba(0, 255, 136, 0.1);
-                font-family: var(--font-mono);
-                font-size: ${fontSize}px;
-                pointer-events: none;
-            `;
-            drop.textContent = characters[Math.floor(Math.random() * characters.length)];
-            matrixContainer.appendChild(drop);
-
-            // Reset drop to top randomly
-            if (drops[i] * fontSize > window.innerHeight && Math.random() > 0.975) {
-                drops[i] = 0;
-            }
-            drops[i]++;
-        }
-    }
-
-    // Update matrix rain
-    setInterval(drawMatrix, 100);
-}
 
 // Resize handler
 window.addEventListener('resize', function () {
@@ -547,6 +514,21 @@ if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || wi
                 console.log('SW registration failed: ', registrationError);
             });
     });
+}
+
+// Hero Image Stroke Effect
+function initHeroImageStroke() {
+    const imageContainer = document.querySelector('.image-container');
+
+    if (imageContainer) {
+        imageContainer.addEventListener('mousemove', (e) => {
+            const rect = imageContainer.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const angle = Math.atan2(e.clientY - centerY, e.clientX - centerX) * 180 / Math.PI;
+            imageContainer.style.setProperty('--angle', `${angle}deg`);
+        });
+    }
 }
 
 // Export functions for testing (if needed)

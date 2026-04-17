@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://adarsh.triada.in/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /

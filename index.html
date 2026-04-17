@@ -1,474 +1,836 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adarsh SR | Cybersecurity Portfolio, TRIADA CTF, VULNCON Core Team</title>
-    <meta name="description"
-        content="Adarsh SR – Ethical Hacker, CTF player, TRIADA founder, and VULNCON core member. Explore security projects and writeups in Bangalore, India.">
-    <meta name="keywords"
-        content="Adarsh SR, Cybersecurity Portfolio, Ethical Hacker, CTF Player, Penetration Testing, Security Research, TRIADA CTF Team, VULNCON Core Team, Bug Bounty, InfoSec, Bangalore India, CTFtime, Cybersecurity Enthusiast, Reverse Engineering, OSINT, Linux Security, Web Pentesting, Vulnerability Research">
-    <meta name="author" content="Adarsh SR">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="theme-color" content="#0a0a0a">
-    <meta property="og:locale" content="en_IN">
-    <meta property="og:site_name" content="Adarsh SR Portfolio">
-    <link rel="canonical" href="https://adarsh.triada.in/">
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="alternate" hreflang="x-default" href="https://adarsh.triada.in/">
-    <link rel="alternate" hreflang="en" href="https://adarsh.triada.in/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://adarsh.triada.in/">
-    <meta property="og:title" content="Adarsh SR | Cybersecurity Portfolio, TRIADA CTF, VULNCON Core Team">
-    <meta property="og:description"
-        content="Portfolio of Adarsh SR – Cybersecurity Enthusiast, Founder of TRIADA CTF Team, Core Team at VULNCON. Explore projects, CTFs, blogs, and connect for collaborations.">
-    <meta property="og:image" content="https://adarsh.triada.in/photos/A_sq.png">
+  <!-- PRIMARY SEO -->
+  <title>Adarsh SR | TRIADA CTF Founder & Pentester, Bangalore</title>
+  <meta name="description"
+    content="Adarsh SR, founder of TRIADA CTF team, is a Bangalore-based web application pentester, CTF player, and VULNCON core team security researcher.">
+  <meta name="keywords"
+    content="Adarsh SR, Adarsh TRIADA, TRIADA CTF, pentester India, web application security, CTF player India, ethical hacker Bangalore, VULNCON, security researcher India, bug bounty India">
+  <meta name="author" content="Adarsh SR">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://adarsh.triada.in">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://adarsh.triada.in/">
-    <meta name="twitter:title" content="Adarsh SR | Cybersecurity Portfolio, TRIADA CTF, VULNCON Core Team">
-    <meta name="twitter:description"
-        content="Portfolio of Adarsh SR – Cybersecurity Enthusiast, Founder of TRIADA CTF Team, Core Team at VULNCON. Explore projects, CTFs, blogs, and connect for collaborations.">
-    <meta name="twitter:image" content="https://adarsh.triada.in/photos/A_sq.png">
+  <!-- GEO TARGETING -->
+  <meta name="geo.region" content="IN-KA">
+  <meta name="geo.placename" content="Bangalore, Karnataka, India">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="photos/favicon.png">
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://adarsh.triada.in">
+  <meta property="og:title" content="Adarsh SR | Pentester & TRIADA CTF Founder">
+  <meta property="og:description"
+    content="Founder of TRIADA, one of India's top-ranked CTF teams. Web application pentester and security researcher based in Bangalore, India.">
+  <meta property="og:image" content="https://adarsh.triada.in/photos/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Adarsh SR — Pentester and TRIADA CTF Founder">
+  <meta property="og:site_name" content="Adarsh SR">
+  <meta property="og:locale" content="en_IN">
+  <meta property="profile:first_name" content="Adarsh">
+  <meta property="profile:last_name" content="SR">
+  <meta property="profile:username" content="adarsh-sr">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@adarsh_sr_">
+  <meta name="twitter:creator" content="@adarsh_sr_">
+  <meta name="twitter:title" content="Adarsh SR | Pentester & TRIADA CTF Founder">
+  <meta name="twitter:description"
+    content="Founder of TRIADA, one of India's top-ranked CTF teams. Web application pentester based in Bangalore.">
+  <meta name="twitter:image" content="https://adarsh.triada.in/photos/og-image.png">
+  <meta name="twitter:image:alt" content="Adarsh SR — Pentester and TRIADA CTF Founder">
+
+  <!-- PERFORMANCE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/photos/team.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/photos/team.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/photos/team.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- FONTS (match --font-display, --font-body, --font-mono in styles.css) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  </noscript>
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </noscript>
+
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.cdnfonts.com/css/technos" rel="stylesheet">
-    
-    <script type="application/ld+json">
+  </noscript>
+</head>
+
+<body>
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="logo">Adarsh <em>SR</em></a>
+
+      <nav class="nav-main" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+          <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+          <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+          <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+          <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://drive.google.com/file/d/1jzvRzCfRskz3JFZhvHtSF8S35VAbIqYP/view?usp=sharing" target="_blank"
+        rel="noopener noreferrer" class="nav-cta">Resume</a>
+
+      <button id="nav-burger" class="burger" type="button" aria-label="Open menu" aria-controls="nav-mobile"
+        aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation mobile" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="https://drive.google.com/file/d/1jzvRzCfRskz3JFZhvHtSF8S35VAbIqYP/view?usp=sharing" target="_blank"
+        rel="noopener noreferrer">Resume ↗</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content reveal">
+            <p class="hero-eyebrow">
+              <span class="hero-dot"></span>
+              Pentester · CTF Player · Security Researcher
+            </p>
+
+            <h1 class="hero-name">Adarsh SR<span class="period">.</span></h1>
+
+            <p class="hero-desc">Security analyst with
+              hands-on experience in real-world web application pentesting and vulnerability research.</p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-red">
+                View My Work
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+
+            <ul class="hero-social">
+              <li><a href="https://linkedin.com/in/adarsh-sr" target="_blank" rel="noopener noreferrer"
+                  class="hero-social-link" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                    height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg></a></li>
+              <li><a href="https://github.com/Adarsh-S-R" target="_blank" rel="noopener noreferrer"
+                  class="hero-social-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                    height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg></a></li>
+              <li><a href="https://x.com/adarsh_sr_" target="_blank" rel="noopener noreferrer" class="hero-social-link"
+                  aria-label="X / Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                  </svg></a></li>
+              <li><a href="https://ctftime.org/team/303057" target="_blank" rel="noopener noreferrer"
+                  class="hero-social-link" aria-label="CTFtime"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                    height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                    <line x1="4" x2="4" y1="22" y2="15" />
+                  </svg></a></li>
+              <li><a href="mailto:adarshtriada@gmail.com" class="hero-social-link" aria-label="Email"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+    <section id="about" class="section" aria-label="About">
+      <div class="container">
+        <p class="section-label reveal">About</p>
+
+        <div class="about-grid">
+          <div class="about-photo-wrapper reveal">
+            <div class="about-photo glass">
+              <img src="https://media.licdn.com/dms/image/v2/D5603AQG7VScodEBoaA/profile-displayphoto-scale_400_400/B56Z00XrZZJsAg-/0/1774700118846?e=1778112000&v=beta&t=6735ca1VwdX_YfSWeAcUmO1in-qdmiV7HWBecTCst90" alt="Adarsh SR" width="280" height="280">
+            </div>
+          </div>
+          <div class="about-bio reveal">
+            <p>I'm <strong>Adarsh SR</strong>, a cybersecurity practitioner and competitive CTF player with a sharp
+              focus on web application penetration testing, vulnerability research, and offensive security. Currently
+              pursuing a Bachelor's in Computer Applications at <em>Yenepoya University, Bangalore</em>.</p>
+            <p>I'm the founder of <a href="https://triada.in" target="_blank" rel="noopener noreferrer">TRIADA</a> — one
+              of India's top 1% competitive CTF teams. I've designed and deployed 30+ challenges across web, reverse
+              engineering, cryptography, and forensics for live competitions.</p>
+            <p>I'm also a core team member at <a href="https://vulncon.in" target="_blank"
+                rel="noopener noreferrer">VULNCON</a>, a national-level cybersecurity conference dedicated to
+              vulnerability research and offensive security — contributing to design, web presence, and event
+              operations.</p>
+          </div>
+        </div>
+
+        <div class="about-footer reveal-stagger">
+          <div class="footer-row">
+            <span class="footer-label">Skills &amp; Tools</span>
+            <div class="skills-tags-horizontal">
+              <span class="skill-tag">Burp Suite</span>
+              <span class="skill-tag">Metasploit</span>
+              <span class="skill-tag">Nmap</span>
+              <span class="skill-tag">SQLMap</span>
+              <span class="skill-tag">Nikto</span>
+              <span class="skill-tag">Gobuster</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Bash</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Kali Linux</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Wireshark</span>
+              <span class="skill-tag">Ghidra</span>
+              <span class="skill-tag">Hashcat</span>
+              <span class="skill-tag">Figma</span>
+            </div>
+          </div>
+          <div class="footer-row">
+            <span class="footer-label">Domains</span>
+            <div class="skills-tags-horizontal">
+              <span class="skill-tag">OWASP Top 10</span>
+              <span class="skill-tag">IDOR / BOLA</span>
+              <span class="skill-tag">JWT Attacks</span>
+              <span class="skill-tag">Auth Bypass</span>
+              <span class="skill-tag">Business Logic Flaws</span>
+              <span class="skill-tag">Reverse Engineering</span>
+              <span class="skill-tag">Cryptography</span>
+              <span class="skill-tag">OSINT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section id="what-i-do" class="section" aria-label="What I do">
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">What I do</p>
+          <h2 class="section-title serif">Three things,<em> done with rigor.</em></h2>
+          <p class="section-desc">A narrow focus on offensive security — from live engagements to competitive research
+            to event execution.</p>
+        </div>
+        <div class="cards-3">
+          <div class="card glass">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between">
+              <div class="card-icon glass">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <span class="card-num serif">01</span>
+            </div>
+            <h3 class="card-title serif">Web Application Pentesting</h3>
+            <p class="card-desc">I identify and validate real-world vulnerabilities — broken authentication, IDOR/BOLA,
+              access control flaws, and logic bugs — and deliver structured reports with proof-of-concept and clear
+              remediation guidance.</p>
+            <div class="card-tags">
+              <span class="tag">OWASP Top 10</span>
+              <span class="tag">IDOR / BOLA</span>
+              <span class="tag">Auth Bypass</span>
+              <span class="tag">Logic Flaws</span>
+            </div>
+          </div>
+          <div class="card glass">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between">
+              <div class="card-icon glass">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                  <line x1="4" x2="4" y1="22" y2="15" />
+                </svg>
+              </div>
+              <span class="card-num serif">02</span>
+            </div>
+            <h3 class="card-title serif">CTF Research &amp; Competition</h3>
+            <p class="card-desc">Active competitor in international CTF competitions across web exploitation, reverse
+              engineering, cryptography, and forensics. I don't just solve — I build and organize.</p>
+            <div class="card-tags">
+              <span class="tag">Web Exploit</span>
+              <span class="tag">Reverse Eng</span>
+              <span class="tag">Crypto</span>
+              <span class="tag">Forensics</span>
+            </div>
+          </div>
+          <div class="card glass">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between">
+              <div class="card-icon glass">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                  <line x1="16" x2="16" y1="2" y2="6" />
+                  <line x1="8" x2="8" y1="2" y2="6" />
+                  <line x1="3" x2="21" y1="10" y2="10" />
+                  <path d="m9 16 2 2 4-4" />
+                </svg>
+              </div>
+              <span class="card-num serif">03</span>
+            </div>
+            <h3 class="card-title serif">Security Event Design</h3>
+            <p class="card-desc">End-to-end design and execution of large-scale CTF competitions — from challenge
+              creation and infrastructure to sponsor coordination and event management.</p>
+            <div class="card-tags">
+              <span class="tag">Challenge Design</span>
+              <span class="tag">Infra</span>
+              <span class="tag">Sponsor Ops</span>
+              <span class="tag">Execution</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════ -->
+    <section id="experience" class="section" aria-label="Experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="kicker">Experience</p>
+          <h2 class="section-title serif">The work I've<em> done.</em></h2>
+          <p class="section-desc">Practical experience across offensive security engagements, team leadership, and event
+            organization.</p>
+        </div>
+
+        <div class="exp-grid reveal-stagger">
+          <!-- Entry 1: Pentest Engagement -->
+          <article class="exp-card glass">
+            <div class="exp-top">
+              <h3 class="exp-role serif">Security Analyst</h3>
+              <span class="exp-date">April 2026</span>
+            </div>
+            <p class="exp-org">Confidential</p>
+            <ul class="exp-bullets">
+              <li>Conducted a web application security assessment on a scheduling and field operations platform serving
+                utility infrastructure</li>
+              <li>Identified broken authentication chains across multiple token tiers</li>
+              <li>Discovered cross-account data access via IDOR and BOLA vulnerabilities</li>
+              <li>Found unauthenticated write access to internal services</li>
+              <li>Reported sensitive operational configuration disclosure on production</li>
+            </ul>
+          </article>
+
+          <!-- Entry 2: TRIADA -->
+          <article class="exp-card glass">
+            <div class="exp-top">
+              <h3 class="exp-role serif">Founder &amp; Team Lead</h3>
+              <span class="exp-date">2024 – Present</span>
+            </div>
+            <p class="exp-org">TRIADA CTF Team</p>
+            <ul class="exp-bullets">
+              <li>Founded one of India's top 1% CTF teams — CTFtime India ~#43, Global ~650</li>
+              <li>Active in international competitions: UTCTF, DiceCTF, HackIM (Nullcon), UIUCTF</li>
+              <li>Designed and deployed 30+ CTF challenges across web, RE, crypto, and forensics</li>
+              <li>Organized TRIADA CTF '25 and '26 — 125+ participants, ₹4.3L+ prize pool</li>
+              <li>Built and deployed a custom CTFd platform for live competitions</li>
+            </ul>
+          </article>
+
+          <!-- Entry 3: VULNCON -->
+          <article class="exp-card glass">
+            <div class="exp-top">
+              <h3 class="exp-role serif">Core Team</h3>
+              <span class="exp-date">Ongoing</span>
+            </div>
+            <p class="exp-org">VULNCON</p>
+            <ul class="exp-bullets">
+              <li>Part of the organizing core team for a national-level cybersecurity conference focused on
+                vulnerability research and offensive security</li>
+              <li>Contributing to design, web presence, and event operations</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIADA -->
+    <section id="triada" class="section" aria-label="TRIADA">
+      <div class="triada-glow"></div>
+      <div class="container" style="position:relative">
+        <p class="kicker">Team Triada</p>
+        <h2 class="triada-headline serif">
+          Team Lead of <em>TRIADA</em> - one of India's top competitive CTF teams.
+        </h2>
+        <div class="glass triada-stats">
+          <div class="stat-cell">
+            <p class="stat-label">CTF's Organized</p>
+            <p class="stat-value serif">3</p>
+          </div>
+          <div class="stat-cell">
+            <p class="stat-label">Total Participants</p>
+            <p class="stat-value serif">350+</p>
+          </div>
+          <div class="stat-cell">
+            <p class="stat-label">Challenges Designed</p>
+            <p class="stat-value serif">30+</p>
+          </div>
+          <div class="stat-cell">
+            <p class="stat-label">Total Prize Pool</p>
+            <p class="stat-value serif">₹5.3L+</p>
+          </div>
+        </div>
+        <div class="triada-bullets">
+          <div class="bullet-card glass">
+            <p class="bullet-num serif">01</p>
+            <p class="bullet-text">Active in international competitions: UTCTF, DiceCTF, HackIM (Nullcon), UIUCTF, and
+              more</p>
+          </div>
+          <div class="bullet-card glass">
+            <p class="bullet-num serif">02</p>
+            <p class="bullet-text">Designed and developed 30+ CTF challenges across web, reverse engineering,
+              cryptography, and forensics</p>
+          </div>
+          <div class="bullet-card glass">
+            <p class="bullet-num serif">03</p>
+            <p class="bullet-text">Built and deployed a full-stack CTF platform used in live competitions</p>
+          </div>
+        </div>
+        <p class="triada-events-label">Events organized</p>
+        <div class="triada-events">
+          <div class="event-card glass-strong">
+            <div class="event-head">
+              <h3 class="event-name serif">TRIADA CTF '25</h3>
+              <span class="event-badge">Event</span>
+            </div>
+            <p class="event-desc">Organized the first Capture The Flag competition at Yenepoya University — establishing
+              a competitive cybersecurity culture within the institution and scaling to an inter-college format.</p>
+            <div class="event-details">
+              <div class="event-detail"><span class="event-detail-dot"></span><span>100+ participants across
+                  India</span></div>
+              <div class="event-detail"><span class="event-detail-dot"></span><span>₹1L+ prize pool</span></div>
+
+            </div>
+            <div style="margin-top: auto; padding-top: 1.5rem;">
+              <a href="https://ctf.triada.in" target="_blank" rel="noopener noreferrer" class="btn btn-red">
+                View highlight
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="event-card glass-strong">
+            <div class="event-head">
+              <h3 class="event-name serif">TRIADA CTF '26</h3>
+              <span class="event-badge">Event</span>
+            </div>
+            <p class="event-desc">Organized a 24-hour offline duo-format CTF competition.</p>
+            <div class="event-details">
+              <div class="event-detail"><span class="event-detail-dot"></span><span>125+ participants across
+                  India</span></div>
+              <div class="event-detail"><span class="event-detail-dot"></span><span>₹4.3L+ prize pool</span></div>
+              <div class="event-detail"><span class="event-detail-dot"></span><span>Sponsors: OtterSec, Lorikeet
+                  Security, BlackPerl, APIsec University</span></div>
+              <div class="event-detail"><span class="event-detail-dot"></span><span>Full ownership of challenge design,
+                  infrastructure, and event execution</span></div>
+            </div>
+            <div style="margin-top: auto; padding-top: 1.5rem;">
+              <a href="https://ctf26.triada.in" target="_blank" rel="noopener noreferrer" class="btn btn-red">
+                View highlight
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="triada-cta">
+          <a href="https://ctftime.org/team/303057" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            View on CTFtime
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M7 7h10v10" />
+              <path d="M7 17 17 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-label="Projects">
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">Projects</p>
+          <h2 class="section-title serif">What I've<em> shipped.</em></h2>
+          <p class="section-desc">Focused, purpose-built tools and platforms used in real engagements and competitions.
+          </p>
+        </div>
+        <div class="proj-grid">
+          <article class="proj-card glass">
+            <div class="proj-top">
+              <span class="proj-num">Project / 01</span>
+              <span class="proj-status-public"><span class="proj-pub-dot pulse"></span>Public</span>
+            </div>
+            <h3 class="proj-name serif">DorkIQ</h3>
+            <p class="proj-desc">A focused Google dork generator that automates targeted reconnaissance queries for any
+              domain — built for fast, effective recon during security assessments.</p>
+            <div class="proj-tags">
+              <span class="tag">Recon</span><span class="tag">OSINT</span><span class="tag">Python</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/Adarsh-S-R" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub</a>
+            </div>
+          </article>
+          <article class="proj-card glass">
+            <div class="proj-top">
+              <span class="proj-num">Project / 02</span>
+              <span class="proj-status-public"><span class="proj-pub-dot pulse"></span>Public</span>
+            </div>
+            <h3 class="proj-name serif">Vulnerable Web Application</h3>
+            <p class="proj-desc">A custom-built intentionally vulnerable platform for practicing and demonstrating
+              real-world web exploits — SQL Injection, XSS, IDOR, SSRF, and file upload vulnerabilities.</p>
+            <div class="proj-tags">
+              <span class="tag">SQLi</span><span class="tag">XSS</span><span class="tag">IDOR</span><span
+                class="tag">SSRF</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/Adarsh-S-R" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub</a>
+            </div>
+          </article>
+          <article class="proj-card glass">
+            <div class="proj-top">
+              <span class="proj-num">Project / 03</span>
+              <span class="proj-status-private">Internal</span>
+            </div>
+            <h3 class="proj-name serif">SOC Automation Toolkit</h3>
+            <p class="proj-desc">Python-based security automation toolkit built for SOC workflows during a TCS
+              engagement. Log parsing, anomaly detection, threat-intel enrichment (AbuseIPDB, VirusTotal, OTX), and
+              automated HTML reporting.</p>
+            <div class="proj-tags">
+              <span class="tag">SOC</span><span class="tag">Threat Intel</span><span class="tag">Automation</span>
+            </div>
+            <div class="proj-links"><span class="proj-nda"></span></div>
+          </article>
+          <article class="proj-card glass">
+            <div class="proj-top">
+              <span class="proj-num">Project / 04</span>
+              <span class="proj-status-private">Internal</span>
+            </div>
+            <h3 class="proj-name serif">CTF Platform - TRIADA CTF '26</h3>
+            <p class="proj-desc">Custom deployment of CTFd v3.8.2 powering TRIADA CTF '26. Fully redesigned UI, tiered
+              sponsor integration, Easter egg challenge flag, and custom frontend enhancements — serving 125+
+              participants across a 24-hour competition.</p>
+            <div class="proj-tags">
+              <span class="tag">CTFd</span><span class="tag">Infra</span><span class="tag">Frontend</span>
+            </div>
+            <div class="proj-links"><span class="proj-nda"></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ACHIEVEMENTS ══════════════════════════ -->
+    <section id="achievements" class="section" aria-label="Achievements">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="kicker">Achievements</p>
+          <h2 class="section-title serif">Where I've<em> placed.</em></h2>
+        </div>
+
+        <div class="glass triada-stats reveal-stagger" style="margin-top: 2.5rem;">
+          <div class="stat-cell">
+            <h3 class="stat-value serif" style="font-size: 2rem; color: var(--red);">1st Runnerup</h3>
+            <p class="stat-label"
+              style="text-transform: none; letter-spacing: 0; color: rgba(255,255,255,0.7); font-size: 0.875rem; margin-top: 0.75rem;">
+              Threat Hunting CTF, Seasides Goa</p>
+          </div>
+          <div class="stat-cell">
+            <h3 class="stat-value serif" style="font-size: 2rem; color: var(--red);">2nd Runner-up</h3>
+            <p class="stat-label"
+              style="text-transform: none; letter-spacing: 0; color: rgba(255,255,255,0.7); font-size: 0.875rem; margin-top: 0.75rem;">
+              Seasides Offline CTF 2026</p>
+          </div>
+          <div class="stat-cell">
+            <h3 class="stat-value serif" style="font-size: 2rem; color: var(--red);">2nd Runner-up</h3>
+            <p class="stat-label"
+              style="text-transform: none; letter-spacing: 0; color: rgba(255,255,255,0.7); font-size: 0.875rem; margin-top: 0.75rem;">
+              BSides Bangalore CTF</p>
+          </div>
+          <div class="stat-cell">
+            <h3 class="stat-value serif" style="font-size: 2rem; color: var(--red);">5th Place</h3>
+            <p class="stat-label"
+              style="text-transform: none; letter-spacing: 0; color: rgba(255,255,255,0.7); font-size: 0.875rem; margin-top: 0.75rem;">
+              bi0s CTF</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ GALLERY ═══════════════════════════════ -->
+    <section id="gallery" class="section section-gallery" aria-label="Gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="kicker">Gallery</p>
+          <h2 class="section-title serif">Moments &amp;<em> events.</em></h2>
+        </div>
+
+        <div class="gallery-grid reveal" style="margin-top: 4rem;">
+          <figure class="gallery-item">
+            <img src="photos/team.png" alt="Adarsh SR with Team Triada at TRIADA CTF 2026" width="600" height="400"
+              class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Team Triada CTF '26</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="photos/Adarsh_triada.jpg" alt="Adarsh SR with Rahul Sasi, Founder of CloudSEK" width="600"
+              height="400" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">With Rahul Sasi, Founder — CloudSEK</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="photos/team.jpg" alt="Adarsh SR with Team at VULNCON 2024" width="600" height="400"
+              class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">VULNCON 2024</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="photos/img_null.jpg" alt="Adarsh SR with Monnappa KA" width="600" height="400"
+              class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">With Monnappa KA</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="photos/Seasides_thv.jpg" alt="Adarsh SR at Seasides Goa Threat Hunting Village CTF" width="600"
+              height="400" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Winner, Threat Hunting CTF — Seasides Goa</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="photos/vulnteam.jpg" alt="Adarsh SR VULNCON 2025 Team" width="600" height="400"
+              class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">VULNCON 2025</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ WRITEUPS ═════════════════════════════ -->
+    <section id="writeups" class="section" aria-label="Writeups">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="kicker">Writeups</p>
+          <h2 class="section-title serif">Notes from the<em> trenches.</em></h2>
+          <p class="section-desc">I publish detailed technical writeups covering CTF challenge solutions and
+            vulnerability research. Each writeup breaks down the approach, exploitation path, and key takeaways —
+            written to be useful, not just correct.</p>
+        </div>
+
+        <div class="reveal" style="margin-top: 2rem;">
+          <a href="https://adarshsr.gitbook.io/writeups/" target="_blank" rel="noopener noreferrer" class="btn btn-red">
+            Read Writeups
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M7 7h10v10" />
+              <path d="M7 17 17 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-label="Contact">
+      <div class="contact-glow-1"></div>
+      <div class="contact-glow-2"></div>
+      <div class="container" style="position:relative">
+        <div class="section-header">
+          <p class="kicker">Contact</p>
+          <h2 class="section-title serif">Let's work<em> together.</em></h2>
+          <p class="section-desc">Available for web application pentests, CTF design, and security consulting. Feel free
+            to reach out for collaborations, engagements, or just to say hi.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="glass-strong contact-links-panel reveal-stagger">
+            <div class="contact-links-head">
+              <span class="direct-label">Direct channels</span>
+              <button id="copy-email-btn"><span id="copy-label">copy email</span></button>
+            </div>
+            <ul class="contact-link-list">
+              <li><a href="mailto:adarshtriada@gmail.com" class="contact-link-item">
+                  <div class="contact-link-left"><span class="contact-link-label">Email</span></div><span
+                    class="contact-link-value">adarshtriada@gmail.com</span>
+                </a></li>
+              <li><a href="https://linkedin.com/in/adarsh-sr" target="_blank" rel="noopener noreferrer"
+                  class="contact-link-item">
+                  <div class="contact-link-left"><span class="contact-link-label">LinkedIn</span></div><span
+                    class="contact-link-value">/in/adarsh-sr</span>
+                </a></li>
+              <li><a href="https://github.com/Adarsh-S-R" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                  <div class="contact-link-left"><span class="contact-link-label">GitHub</span></div><span
+                    class="contact-link-value">Adarsh-S-R</span>
+                </a></li>
+              <li><a href="https://x.com/adarsh_sr_" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                  <div class="contact-link-left"><span class="contact-link-label">X / Twitter</span></div><span
+                    class="contact-link-value">@adarsh_sr_</span>
+                </a></li>
+              <li><a href="https://ctftime.org/team/303057" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                  <div class="contact-link-left"><span class="contact-link-label">CTFtime</span></div><span
+                    class="contact-link-value">team/303057</span>
+                </a></li>
+              <li><a href="https://drive.google.com/file/d/1jzvRzCfRskz3JFZhvHtSF8S35VAbIqYP/view?usp=sharing"
+                  target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                  <div class="contact-link-left"><span class="contact-link-label">Resume</span></div><span
+                    class="contact-link-value">Download PDF</span>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>&copy; 2026 Adarsh SR · adarsh.triada.in · Built for serious work.</p>
+    </div>
+  </footer>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://adarsh.triada.in/#person",
       "name": "Adarsh SR",
-      "url": "https://adarsh.triada.in/",
-      "image": "https://adarsh.triada.in/photos/A_sq.png",
+      "alternateName": ["Adarsh", "Adarsh TRIADA"],
+      "url": "https://adarsh.triada.in",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://adarsh.triada.in/photos/og-image.png",
+        "width": 1200,
+        "height": 630
+      },
+      "jobTitle": "Penetration Tester",
+      "description": "Adarsh SR is a cybersecurity practitioner, web application pentester, and founder of TRIADA — one of India's top 1% CTF teams. Based in Bangalore, India.",
+      "email": "adarshtriada@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
       "sameAs": [
         "https://linkedin.com/in/adarsh-sr",
         "https://github.com/Adarsh-S-R",
         "https://x.com/adarsh_sr_",
         "https://ctftime.org/team/303057",
-        "https://triada.in",
-        "https://vulncon.in"
+        "https://triada.in"
       ],
-      "jobTitle": "Cybersecurity Enthusiast",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "TRIADA CTF Team"
-      },
+      "knowsAbout": [
+        "Web Application Penetration Testing",
+        "Capture The Flag",
+        "OWASP Top 10",
+        "Vulnerability Research",
+        "Cybersecurity",
+        "Reverse Engineering",
+        "CTF Challenge Design",
+        "Security Event Organization"
+      ],
       "alumniOf": {
         "@type": "CollegeOrUniversity",
-        "name": "BCA (Bachelor of Computer Applications)"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bangalore",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 12.9716,
-        "longitude": 77.5946
-      },
-      "nationality": "Indian",
-      "knowsAbout": [
-        "Cybersecurity",
-        "Penetration Testing",
-        "CTF",
-        "Ethical Hacking",
-        "Reverse Engineering",
-        "Vulnerability Research",
-        "OSINT",
-        "Linux"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Adarsh SR Cybersecurity Portfolio",
-      "url": "https://adarsh.triada.in/",
-      "description": "Portfolio of Adarsh SR – Cybersecurity Enthusiast, Founder of TRIADA CTF Team, Core Team at VULNCON",
-      "author": {
-        "@type": "Person",
-        "name": "Adarsh SR"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "Adarsh SR"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://adarsh.triada.in/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "TRIADA CTF Team",
-      "url": "https://triada.in",
-      "logo": "https://triada.in/logo.png",
-      "founder": {
-        "@type": "Person",
-        "name": "Adarsh SR"
-      },
-      "description": "India's top-ranked CTF team focused on cybersecurity challenges and competitions",
-      "sameAs": [
-        "https://x.com/triadactf",
-        "https://github.com/TRIADA-CTF",
-        "https://ctftime.org/team/303057"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adarsh.triada.in/" },
-        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://adarsh.triada.in/#about" },
-        { "@type": "ListItem", "position": 3, "name": "Projects", "item": "https://adarsh.triada.in/#projects" },
-        { "@type": "ListItem", "position": 4, "name": "Blog", "item": "https://adarsh.triada.in/#blog" },
-        { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://adarsh.triada.in/#contact" }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Adarsh SR Writeups",
-      "url": "https://adarshsr.gitbook.io/writeups",
-      "author": { "@type": "Person", "name": "Adarsh SR" },
-      "inLanguage": "en",
-      "about": "CTF Writeups, Cybersecurity Blogs, and Technical Notes"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is TRIADA CTF?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TRIADA is a cybersecurity CTF team founded by Adarsh SR, competing internationally and mentoring new ethical hackers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I collaborate with Adarsh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can reach Adarsh via LinkedIn or email (adarshtriada@gmail.com) for collaborations, security research, or talks."
-          }
+        "name": "Yenepoya University",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bangalore",
+          "addressCountry": "IN"
         }
-      ]
+      },
+      "founder": {
+        "@type": "Organization",
+        "name": "TRIADA",
+        "url": "https://triada.in",
+        "description": "Top 1% competitive CTF team in India"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://adarsh.triada.in/#website",
+      "url": "https://adarsh.triada.in",
+      "name": "Adarsh SR — Portfolio",
+      "description": "Portfolio of Adarsh SR, web application pentester and TRIADA CTF founder",
+      "publisher": {
+        "@id": "https://adarsh.triada.in/#person"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://adarsh.triada.in/#webpage",
+      "url": "https://adarsh.triada.in",
+      "name": "Adarsh SR | Pentester & TRIADA CTF Founder",
+      "description": "Adarsh SR — founder of TRIADA, one of India's top 1% CTF teams, and web application pentester based in Bangalore.",
+      "isPartOf": {
+        "@id": "https://adarsh.triada.in/#website"
+      },
+      "about": {
+        "@id": "https://adarsh.triada.in/#person"
+      },
+      "inLanguage": "en-IN"
     }
-    </script>
-</head>
-
-<body class="sl-root-bg">
-    <!-- nav -->
-    <header>
-        <div class="logo">Adarsh<span class="logo-accent">.</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- hero -->
-        <section id="home" class="hero">
-            <div class="container hero-container">
-                <div class="hero-image">
-                    <div class="image-container">
-                        <div class="placeholder-avatar">
-                            <img src="photos/A_sq.png" alt="Adarsh SR, Cybersecurity Enthusiast" width="350"
-                                height="350">
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-text">
-                    <h1>Adarsh SR</h1>
-                    <div class="hero-subtitle">
-                        <span>Cybersecurity Enthusiast</span>
-                        <span>Core Team &ndash; <a href="https://vulncon.in" target="_blank" rel="noopener" class="accent">VULNCON
-                            </a></span>
-                        <span>Team Lead &ndash; <a href="https://triada.in" target="_blank" rel="noopener" class="accent">TRIADA CTF</a></span>
-                       <div class="hero-location">
-                           <i class="fas fa-map-marker-alt"></i>
-                           <span>Bangalore, India</span>
-                       </div>
-                    </div>
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn primary-btn">View Projects</a>
-                        <a href="#contact" class="btn secondary-btn">Contact</a>
-                    </div>
-                    <div class="hero-socials">
-                        <a href="https://linkedin.com/in/adarsh-sr" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Adarsh-S-R" target="_blank" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://x.com/adarsh_sr_" target="_blank" aria-label="Twitter"><i
-                                class="fa-brands fa-x-twitter"></i></a>
-                        <a href="mailto:adarshtriada@gmail.com" target="_blank" aria-label="Email"><i
-                                class="fas fa-envelope"></i></a>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- abt -->
-        <section id="about" class="about">
-            <div class="container about-container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>About Me</h2>
-                        <div class="underline"></div>
-                        <p>
-                            I’m Adarsh SR, a cybersecurity enthusiast and competitive CTF player with a strong focus on
-                            ethical hacking, reverse engineering, and system security. I’m currently pursuing a
-                            Bachelor’s degree in Computer Applications while actively pushing the boundaries of
-                            offensive security through hands-on practice and research.
-                        </p>
-                        <p>
-                            I’m the founder of <a href="https://triada.in" target="_blank" rel="noopener" class="accent">TRIADA</a>,
-                            one of India’s top-ranked CTF teams, and a core team member at <a href="https://vulncon.in"
-                                target="_blank" rel="noopener" class="accent">VULNCON</a>, a national-level cybersecurity conference
-                            dedicated to exploring vulnerabilities, ethical hacking, and digital defense strategies. It
-                            brings together professionals, students, and enthusiasts to share knowledge, showcase
-                            skills, and foster innovation in the infosec community.
-                        </p>
-                        <div class="skills-tags">
-                            <div class="tag">Penetration Testing</div>
-                            <div class="tag">CTF</div>
-                            <div class="tag">Vulnerability Research</div>
-                            <div class="tag">Reverse Engineering</div>
-                            <div class="tag">Linux</div>
-                            <div class="tag">OSINT</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- prj -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Featured Projects</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card" itemscope itemtype="https://schema.org/SoftwareApplication">
-                        <div class="project-content">
-                            <h3 itemprop="name">DorkIQ</h3>
-                            <p itemprop="description"> DorkIQ generates focused Google dorks tailored to any target domain, making fast, effective reconnaissance and triage simple.</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Recon</span>
-                                <span class="tag">OSINT</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Adarsh-S-R/DorkIQ" class="project-link" target="_blank" rel="noopener">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                                <a href="https://dorkiq.triada.in" class="project-link" target="_blank" rel="noopener">
-                                    Live
-                                </a>
-                            </div>
-                        </div>
-                        <meta itemprop="applicationCategory" content="SecurityApplication">
-                        <meta itemprop="operatingSystem" content="Web-based">
-                        <meta itemprop="programmingLanguage" content="Python">
-                    </div>
-                    <div class="project-card" itemscope itemtype="https://schema.org/WebApplication">
-                        <div class="project-content">
-                            <h3 itemprop="name">Web Pentesting Platform</h3>
-                            <p itemprop="description">A vulnerable web application built for learning and practicing web vulnerabilities like
-                                SQLi, XSS, IDOR, SSRF, and File Upload Exploits.</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Cybersecurity</span>
-                                <span class="tag">Practice Platform</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://web-pentest-playground.onrender.com" class="project-link"
-                                    target="_blank" rel="noopener">
-                                    Live
-                                </a>
-                                <a href="https://github.com/Adarsh-S-R/web-pentest-playground" class="project-link"
-                                    target="_blank" rel="noopener">
-                                    <i class="fab fa-github"></i> Repo
-                                </a>
-                                <span class="project-status">In Development</span>
-                            </div>
-                        </div>
-                        <meta itemprop="applicationCategory" content="SecurityApplication">
-                        <meta itemprop="operatingSystem" content="Web-based">
-                        <meta itemprop="programmingLanguage" content="Python">
-                    </div>
-                    <div class="project-card empty">
-                        <div class="add-project">
-                            <i class="fas fa-plus-circle"></i>
-                            <p>More Projects Coming Soon</p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <!-- blg -->
-        <section id="blog" class="blog">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Latest Writeups</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="blog-content">
-                    <p>Explore my latest blogs and detailed writeups on cybersecurity challenges and CTF solutions. I
-                        document my learning journey and share insights into various security concepts.</p>
-                    <a href="https://adarshsr.gitbook.io/writeups" class="btn primary-btn" target="_blank" rel="noopener">
-                        <i class="fas fa-book"></i> Read My Writeups
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- glry -->
-        <section id="gallery" class="gallery">
-            <div class="section-header">
-                <h2>Gallery<span class="accent">.</span></h2>
-                <div class="underline"></div>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="photos/nwrk_pty01.jpg" alt="Network Party" width="300" height="200" class="gallery-image" loading="lazy">
-                    <div class="gallery-overlay">
-                        <p>VULNCON 2024</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photos/Adarsh_triada.jpg" alt="With Rahul Sasi" width="300" height="200"
-                        class="gallery-image" loading="lazy">
-                    <div class="gallery-overlay">
-                        <p>Rahul Sasi, Founder - CloudSEK</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photos/team.jpg" alt="Team VULNCON" width="300" height="200" class="gallery-image" loading="lazy">
-                    <div class="gallery-overlay">
-                        <p>VULNCON 2024</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photos/img_null.jpg" alt="With Monnappa KA" width="300" height="200"
-                        class="gallery-image" loading="lazy">
-                    <div class="gallery-overlay">
-                        <p>Monnappa KA</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photos/Seasides_thv.jpg" alt="Seasides THV" width="300" height="200"
-                        class="gallery-image" loading="lazy">
-                    <div class="gallery-overlay">
-                        <p>Winner, Threat Hunting CTF @ Seasides Goa</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photos/vulnteam.jpg" alt="VULNCON 2025" width="300" height="200" class="gallery-image" loading="lazy">
-                    <div class="gallery-overlay">
-                        <p>VULNCON 2025</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- cont -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get In Touch</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="contact-content bento-contact">
-                    <div class="bento-contact-text bento-item">
-                        <h3>Let's Connect</h3>
-                        <p>Feel free to reach out for collaborations or just to say hi!</p>
-                        <a href="https://drive.google.com/file/d/1jzvRzCfRskz3JFZhvHtSF8S35VAbIqYP/view?usp=sharing"
-                            class="btn primary-btn" target="_blank" rel="noopener"
-                            style="margin-top:1.1rem;display:inline-block;">
-                            <i class="fas fa-download" style="margin-right:0.5em;"></i>Download Resume
-                        </a>
-                    </div>
-                    <div class="bento-contact-socials bento-item">
-                        <a href="https://linkedin.com/in/adarsh-sr" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-linkedin"></i>
-                            <span>adarsh-sr</span>
-                        </a>
-                        <a href="https://github.com/Adarsh-S-R" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i>
-                            <span>Adarsh-S-R</span>
-                        </a>
-                        <a href="https://x.com/adarsh_sr_" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-twitter"></i>
-                            <span>@adarsh_sr_</span>
-                        </a>
-                        <a href="mailto:adarshtriada@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>adarshtriada@gmail.com</span>
-                        </a>
-                        <a href="https://ctftime.org/team/303057" class="social-link" target="_blank" rel="noopener">
-                            <img src="photos/ctftime-avatar.png" alt="CTFtime Logo"
-                                style="width:20px;height:20px;vertical-align:middle;" />
-                            <span>CTFtime</span>
-                        </a>
-                    </div>
-                </div>
-        </section>
-    </main>
-
-    <div class="sl-noise"></div>
-    <div class="sl-sparkle"></div>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <span>&copy; 2025 Adarsh SR. All rights reserved.</span>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  ]
+}
+</script>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,8 @@
+# NOTE: GitHub Pages does NOT support this file (Cloudflare Pages/Netlify format).
+# The CSP + referrer policy are currently shipped as <meta> tags in app/layout.tsx.
+# If this site ever moves behind Cloudflare/CF Pages, serve these as real headers
+# and add what meta cannot: X-Frame-Options, HSTS, X-Content-Type-Options,
+# Permissions-Policy, COOP/CORP, frame-ancestors.
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY

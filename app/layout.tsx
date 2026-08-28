@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { BackgroundGlow } from "@/components/BackgroundGlow";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { summary } from "@/lib/content";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +12,7 @@ const inter = Inter({
   weight: ["400", "500", "600"],
   display: "swap",
 });
+
 
 const siteUrl = "https://adarsh.triada.in";
 
@@ -82,8 +84,7 @@ const personJsonLd = {
   url: siteUrl,
   image: `${siteUrl}/photos/A_sq.png`,
   jobTitle: "Security Consultant",
-  description:
-    "Security researcher and consultant specialising in web, API, and Android penetration testing and authorization testing. Founder and lead of TRIADA, a top 1% nationally ranked CTF team.",
+  description: summary,
   worksFor: { "@type": "Organization", name: "Offenlix Labs" },
   founderOf: { "@type": "Organization", name: "TRIADA", url: "https://triada.in" },
   memberOf: { "@type": "Organization", name: "VULNCON", url: "https://vulncon.in" },

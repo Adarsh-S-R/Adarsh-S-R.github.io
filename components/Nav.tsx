@@ -17,10 +17,20 @@ const NAV_ITEMS = [
 export function Nav() {
   const [open, setOpen] = useState(false);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setOpen(false);
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", href);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 sm:px-8">
-        <a href="#hero" className="font-display text-lg text-foreground" onClick={() => setOpen(false)}>
+        <a href="#hero" className="font-display text-lg text-foreground" onClick={(e) => handleScroll(e, "#hero")}>
           Adarsh<span className="text-accent">.</span>
         </a>
         <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
@@ -28,6 +38,7 @@ export function Nav() {
             <a
               key={item.href}
               href={item.href}
+              onClick={(e) => handleScroll(e, item.href)}
               className="text-[13.5px] text-foreground-soft transition-colors hover:text-foreground"
             >
               {item.label}
@@ -71,7 +82,7 @@ export function Nav() {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => handleScroll(e, item.href)}
                   className="py-2 text-[15px] text-foreground-soft transition-colors hover:text-foreground"
                 >
                   {item.label}

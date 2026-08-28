@@ -10,7 +10,7 @@ export function Background() {
           <span aria-hidden="true" className="font-display hidden text-6xl leading-none text-accent md:block">
             &ldquo;
           </span>
-          <p className="max-w-[70ch] text-[15.5px] leading-[1.75] text-foreground-soft">{summary}</p>
+          <p className="max-w-[85ch] text-[15.5px] leading-[1.75] text-foreground-soft">{summary}</p>
         </div>
       </div>
     </section>

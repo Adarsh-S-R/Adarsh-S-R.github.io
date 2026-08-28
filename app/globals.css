@@ -1,22 +1,45 @@
 @import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: "Telegraf";
+  font-family: "TelegrafFinal";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/Telegraf-Regular.woff") format("woff");
+  src: url("/fonts/Telegraf-Regular.otf?v=final") format("opentype");
 }
 
 @font-face {
-  font-family: "Telegraf";
+  font-family: "TelegrafFinal";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Telegraf-Regular.otf?v=final") format("opentype");
+}
+
+@font-face {
+  font-family: "TelegrafFinal";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Telegraf-UltraBold.otf?v=final") format("opentype");
+}
+
+@font-face {
+  font-family: "TelegrafFinal";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/Telegraf-UltraBold.woff") format("woff");
+  src: url("/fonts/Telegraf-UltraBold.otf?v=final") format("opentype");
 }
 
-@custom-variant dark (&:is(.dark *));
+@font-face {
+  font-family: "TelegrafFinal";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/Telegraf-UltraBold.otf?v=final") format("opentype");
+}
 
 :root {
   --radius: 0;
@@ -56,7 +79,6 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Telegraf", var(--font-inter), sans-serif;
   --radius-sm: calc(var(--radius) - 6px);
   --radius-md: calc(var(--radius) - 3px);
   --radius-lg: var(--radius);
@@ -95,8 +117,14 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-display);
+  font-family: "TelegrafFinal", sans-serif !important;
   font-weight: 400;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "TelegrafFinal", sans-serif !important;
+  }
 }
 
 ::selection {

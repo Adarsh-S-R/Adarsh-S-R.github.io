@@ -5,7 +5,7 @@ export function Community() {
   return (
     <section id="community" className="w-full py-16 sm:py-20">
       <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
-        <SectionHeader index="05" eyebrow="Community" title="TRIADA" />
+        <SectionHeader index="04" eyebrow="Community" title="TRIADA" />
         <p className="-mt-4 mb-8 max-w-[62ch] text-[14.5px] leading-[1.6] text-foreground-muted">
           I founded TRIADA in 2024 and lead it, running the university&rsquo;s CTF team and its national
           competitions.

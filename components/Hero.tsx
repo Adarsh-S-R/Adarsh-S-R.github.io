@@ -1,11 +1,11 @@
 import Image from "next/image";
+import { engagementsCount, findingsCount } from "@/lib/content";
 
 const STATS = [
-  { value: "200+", label: "Findings reported" },
-  { value: "14+", label: "Client engagements" },
+  { value: findingsCount, label: "Findings reported" },
+  { value: engagementsCount, label: "Client engagements" },
   { value: "Top 1%", label: "CTFtime, India" },
   { value: "50+", label: "Challenges authored" },
-  { value: "70+", label: "Teams at CTF 2026" },
 ];
 
 export function Hero() {
@@ -22,7 +22,7 @@ export function Hero() {
 
             <p className="max-w-[62ch] text-[16px] leading-[1.65] text-foreground-soft">
               Security consultant and researcher specialising in web, API, and Android penetration
-              testing and authorization testing. 200+ findings across 14+ client engagements. Founder
+              testing and authorization testing. {findingsCount} findings across {engagementsCount} client engagements. Founder
               and lead of a top 1% nationally ranked CTF team.
             </p>
 

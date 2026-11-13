@@ -115,11 +115,14 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <head>
         {/* GitHub Pages cannot send HTTP headers, so the CSP ships as a meta tag.
             Meta CSP ignores frame-ancestors, so X-Frame-Options/HSTS still need a
-            CDN (e.g. Cloudflare) in front if clickjacking/HSTS hardening is wanted. */}
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
-        />
+            CDN (e.g. Cloudflare) in front if clickjacking/HSTS hardening is wanted.
+            Production-only: dev's Turbopack/React needs eval(), which this CSP omits. */}
+        {process.env.NODE_ENV === "production" && (
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests"
+          />
+        )}
         <meta name="referrer" content="strict-origin-when-cross-origin" />
       </head>
       <body className={`${inter.variable} min-h-screen bg-background font-sans text-foreground antialiased`}>

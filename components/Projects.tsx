@@ -5,7 +5,7 @@ export function Projects() {
   return (
     <section id="projects" className="w-full py-16 sm:py-20">
       <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
-        <SectionHeader index="04" eyebrow="Building" title="Projects" />
+        <SectionHeader index="03" eyebrow="Building" title="Projects" />
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {projects.map((p) => (

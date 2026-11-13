@@ -27,7 +27,7 @@ export function Gallery() {
   return (
     <section id="gallery" className="w-full py-16 sm:py-20">
       <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
-        <SectionHeader index="06" eyebrow="Moments" title="Gallery" />
+        <SectionHeader index="05" eyebrow="Moments" title="Gallery" />
 
         <div className="grid grid-flow-row-dense auto-rows-[10rem] grid-cols-2 gap-3 sm:grid-cols-4 sm:auto-rows-[12rem]">
           {gallery.map((item, i) => {

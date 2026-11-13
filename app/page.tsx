@@ -2,7 +2,6 @@ import { Background } from "@/components/Background";
 import { Community } from "@/components/Community";
 import { Contact } from "@/components/Contact";
 import { EducationCerts } from "@/components/EducationCerts";
-import { Engagements } from "@/components/Engagements";
 import { Experience } from "@/components/Experience";
 import { FadeIn } from "@/components/FadeIn";
 import { Footer } from "@/components/Footer";
@@ -33,9 +32,6 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <Skills />
-        </Reveal>
-        <Reveal>
-          <Engagements />
         </Reveal>
         <Reveal>
           <Projects />

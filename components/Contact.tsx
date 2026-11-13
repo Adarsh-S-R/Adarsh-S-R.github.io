@@ -25,7 +25,7 @@ export function Contact() {
   return (
     <section id="contact" className="relative w-full py-20 sm:py-32">
       <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
-        <SectionHeader index="08" eyebrow="Contact" title="Get in touch" />
+        <SectionHeader index="07" eyebrow="Contact" title="Get in touch" />
 
         <div className="card relative mt-10 overflow-hidden">
           <div className="glow-grid opacity-60" />

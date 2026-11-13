@@ -1,47 +1,8 @@
+export const findingsCount = "300+";
+export const engagementsCount = "19+";
+
 export const summary =
-  "Application security consultant specialising in authorization and business logic testing across web, REST API, and Android. Reported 200+ findings over 14+ client engagements in insurance, financial services, healthcare, utilities, and manufacturing, including broken object level authorization on payment and claims endpoints and session lifecycle failures missed by prior audits. Independent vulnerability researcher with confirmed findings against NASA, Signicat, and the Government of Canada. Founder of TRIADA, a top 1% nationally ranked CTF team.";
-
-export const engagements = [
-  {
-    n: "01",
-    sector: "Insurance, North America",
-    scope: "Web / API / Android",
-    desc: "Cross-account object access, token lifecycle flaws, mobile credential storage issues.",
-  },
-  {
-    n: "02",
-    sector: "Healthcare and Pharma Services",
-    scope: "External",
-    desc: "Subdomain takeover, unauthenticated management interfaces, EOL services with known CVEs.",
-  },
-  {
-    n: "03",
-    sector: "Utilities and Metering",
-    scope: "Web / API",
-    desc: "Unauthenticated access via filter bypass, unauthenticated token issuance.",
-  },
-  {
-    n: "04",
-    sector: "Industrial Manufacturing",
-    scope: "Web",
-    desc: "Eight internal workflow apps, vendor and customer master data through capital approval.",
-  },
-] as const;
-
-export const engagementNotes = [
-  {
-    title: "Reporting",
-    desc: "CVSS v3.1 scoring, CWE mapping, developer-focused remediation.",
-  },
-  {
-    title: "Retest",
-    desc: "Walked through with the client engineering team, verified before close.",
-  },
-  {
-    title: "Negative results",
-    desc: "Documents what was tested and found sound, not just what broke.",
-  },
-] as const;
+  "Application security consultant specialising in authorization and business logic testing across web, REST API, and Android. Reported 300+ findings over 19+ client engagements in insurance, financial services, healthcare, utilities, and manufacturing, including broken object level authorization on payment and claims endpoints and session lifecycle failures missed by prior audits. Founder of TRIADA, a top 1% nationally ranked CTF team.";
 
 export const experience = [
   {
@@ -51,7 +12,7 @@ export const experience = [
     bullets: [
       "BOLA across payment, document, and permissions endpoints",
       "Session and JWT lifecycle failures",
-      "14+ client-ready pentest reports, CVSS-rated",
+      "19+ client-ready pentest reports, CVSS-rated",
     ],
   },
   {
@@ -112,6 +73,16 @@ export const projects = [
     tags: ["Next.js", "Prisma", "NextAuth", "Threat modelling"],
   },
   {
+    name: "TRIADA Threat",
+    tagline: "Real-time cyber threat intelligence on an interactive 3D globe.",
+    desc: "Aggregates ransomware activity, actively exploited CVEs, botnet C2 infrastructure, scanner activity, and security news on an interactive 3D globe, with live event streaming, filtering, and country-level exploration. Integrates ransomware.live, CISA KEV, NVD, EPSS, abuse.ch, SANS ISC, and MITRE ATT&CK. Server-side aggregation built for resilience: caching, request deduplication, upstream failure isolation, and rate limiting, with CSP, security headers, and server-only secrets in production.",
+    tags: ["Next.js", "Three.js", "TypeScript", "Vitest", "GitHub Actions"],
+    links: [
+      { label: "threat.triada.in", href: "https://threat.triada.in" },
+      { label: "GitHub", href: "https://github.com/Team-Triada/triada-threat" },
+    ],
+  },
+  {
     name: "TRIADA News",
     tagline: "AI-enriched threat intelligence pipeline.",
     desc: "Aggregates 34 security sources hourly through GitHub Actions, covering vendor advisories, threat research, national CERTs, and cloud security bulletins. Extracts CVE identifiers, cross-references the CISA Known Exploited Vulnerabilities catalog, and classifies severity. Model output is treated as untrusted input: every AI response is schema-validated and sanitised, with a deterministic rule-based fallback on failure.",
@@ -126,12 +97,6 @@ export const projects = [
     tagline: "Python toolkit built for SOC workflows during a TCS engagement.",
     desc: "Log parsing, anomaly detection, and threat-intel enrichment via AbuseIPDB, VirusTotal, and OTX, with automated HTML reporting.",
     tags: ["SOC", "Threat intel", "Automation"],
-  },
-  {
-    name: "TRIADA CTF Platform",
-    tagline: "Custom CTFd deployment powering TRIADA CTF 2026.",
-    desc: "CTFd v3.8.2 redesigned end to end: tiered sponsor integration, custom frontend, and an Easter-egg challenge flag, serving 150+ players across a 24-hour competition.",
-    tags: ["CTFd", "Infra", "Frontend"],
   },
   {
     name: "DorkIQ",
